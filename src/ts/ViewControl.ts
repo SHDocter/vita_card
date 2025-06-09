@@ -20,7 +20,7 @@ export class ViewControl {
             $('#tips').text('保底已出');
         }
         else {
-            $('#tips').text(`${minFloor}次内必定获得5星及以上干员`);
+            $('#tips').text(`${minFloor}次内必定获得5星及以上vita`);
         }
     }
 

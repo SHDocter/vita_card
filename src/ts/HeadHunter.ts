@@ -64,7 +64,7 @@ export class HeadHunter {
                     res = this.actList[this.curAct].three[prob];
                     break;
                 default:
-                    throw new Error('错误，不存在低于3星的或高于6星的寻访干员');
+                    throw new Error('错误，不存在低于3星的或高于6星的vita');
             }
         }
         else {
@@ -93,7 +93,7 @@ export class HeadHunter {
                     prob = this.rand.Next(0, num - 1);
                     res = this.normalAgents.three[prob];
                     break;
-                default: throw new Error('错误，不存在低于3星的或高于6星的寻访干员');
+                default: throw new Error('错误，不存在低于3星的或高于6星的vita');
             }
         }
         return res;

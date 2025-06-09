@@ -126,10 +126,10 @@ function ShowHis(type: MyEvent) {
         case 5: agent_array = counter.GetFive(); break;
         case 4: agent_array = counter.GetFour(); break;
         case 3: agent_array = counter.GetThree(); break;
-        default: alert('寻访不存在此种干员'); return;
+        default: alert('卡池不存在此种vita'); return;
     }
     if (agent_array.length == 0) {
-        alert(`没有抽到${type.data.type}星干员`);
+        alert(`没有抽到${type.data.type}星vita`);
         return;
     }
 
