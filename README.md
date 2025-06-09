@@ -1,22 +1,17 @@
-# 明日方舟套麻袋模拟器
+# 千蚀vita套麻袋模拟器
 
-Arknights Hunting Simulator
-
-## 由于没有钱，所以搞了这东西抽个爽...
+在麻袋里放关东煮诱惑千蚀vita上钩
 
 ## 功能
 
 - 套麻袋一次
 - 套麻袋十次
-- 模拟~~氪金~~
 
 ## 使用方法
 
 ### 如果要体验模拟套麻袋，请访问托管页面：<br>
 
-[Github Pages地址(推荐)](https://www.lollipopnougat.top/arknights/)<br>
-[新版Coding 地址](https://09z7l3.coding-pages.com/)
-[Coding Pages地址(已废弃)](https://crepe.coding.me/arknights/)<br>
+[Vercel](https://card.vitavita.world/)<br>
 
 ### 如果对此项目本身感兴趣
 
@@ -27,7 +22,7 @@ Arknights Hunting Simulator
 clone项目
 
 ```bash
-git clone https://github.com/lollipopnougat/arknights.git
+git clone https://github.com/SHDocter/vita_card.git
 ```
 
 随后在项目根目录执行
@@ -64,10 +59,6 @@ src
    |- JsonDefines.d.ts  接口定义
    |- main.ts           入口
    |- Random.ts         随机类
-   |- SJManager.ts      源石麻袋管理器类
+   |- SJManager.ts      货币管理器类
    |- ViewControl.ts    UI视图控制类
 ```
-
-## 写在最后
-
-.......
