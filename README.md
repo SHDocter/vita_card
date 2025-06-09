@@ -1,4 +1,4 @@
-# 明日方舟寻访模拟器
+# 明日方舟套麻袋模拟器
 
 Arknights Hunting Simulator
 
@@ -6,13 +6,13 @@ Arknights Hunting Simulator
 
 ## 功能
 
-- 寻访一次
-- 寻访十次
+- 套麻袋一次
+- 套麻袋十次
 - 模拟~~氪金~~
 
 ## 使用方法
 
-### 如果要体验模拟抽卡，请访问托管页面：<br>
+### 如果要体验模拟套麻袋，请访问托管页面：<br>
 
 [Github Pages地址(推荐)](https://www.lollipopnougat.top/arknights/)<br>
 [新版Coding 地址](https://09z7l3.coding-pages.com/)
@@ -64,7 +64,7 @@ src
    |- JsonDefines.d.ts  接口定义
    |- main.ts           入口
    |- Random.ts         随机类
-   |- SJManager.ts      源石合成玉管理器类
+   |- SJManager.ts      源石麻袋管理器类
    |- ViewControl.ts    UI视图控制类
 ```
 

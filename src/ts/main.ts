@@ -13,8 +13,8 @@ function DrawOnce() {
         ViewControl.HideRadio();
         if (SJManager.compoundJade - 600 < 0) {
             let needSStone = SJManager.CanCalsOriginiumJade(true);
-            if (needSStone == -1) throw new Error('合成玉/源石不足');
-            let result = confirm(`是否要花费 ${needSStone} 源石来兑换 ${needSStone * 180} 合成玉用来寻访？`);
+            if (needSStone == -1) throw new Error('麻袋/星联币不足');
+            let result = confirm(`是否要花费 ${needSStone} 星联币来兑换 ${needSStone * 180} 麻袋用来套麻袋？`);
             if (result) {
                 sjManager.OriginiumsToJade(needSStone);
                 ViewControl.ViewSync(headHunter.GetMinFloor());
@@ -38,8 +38,8 @@ function DrawTenth() {
         ViewControl.HideRadio();
         if (SJManager.compoundJade - 6000 < 0) {
             let needOriginiums = SJManager.CanCalsOriginiumJade(false);
-            if (needOriginiums == -1) throw new Error('合成玉/源石不足');
-            let result = confirm(`是否要花费 ${needOriginiums } 源石来兑换 ${needOriginiums * 180} 合成玉用来寻访？`);
+            if (needOriginiums == -1) throw new Error('麻袋/星联币不足');
+            let result = confirm(`是否要花费 ${needOriginiums } 星联币来兑换 ${needOriginiums * 180} 麻袋用来套麻袋？`);
             if (result) {
                 sjManager.OriginiumsToJade(needOriginiums);
                 ViewControl.ViewSync(headHunter.GetMinFloor());
@@ -66,7 +66,7 @@ function BuyOriginiums(type: number) {
         let num;
         if (sjManager.IsFirstBuy(type)) num = originiumsPacks.extra[type];
         else num = originiumsPacks.count[type];
-        let result = confirm(`是否要花费 ${originiumsPacks.price[type]}  元来购买 ${num} 源石？`);
+        let result = confirm(`是否要花费 ${originiumsPacks.price[type]}  元来购买 ${num} 星联币？`);
         if (!result) return;
         if (sjManager.IsFirstBuy(type)) ViewControl.CloseFirstEx(type);
         sjManager.BuyOriginiums(type);
@@ -92,9 +92,9 @@ function BuyPackage(type: number) {
 
 function ConvertStoneToJade() {
     try {
-        let num = parseInt(prompt("请输入您想要兑换的源石数量：", "1"));
+        let num = parseInt(prompt("请输入您想要兑换的星联币数量：", "1"));
         if (isNaN(num)) num = 1;
-        let result = confirm(`是否花费 ${num} 源石来兑换 ${num * 180} 合成玉？`);
+        let result = confirm(`是否花费 ${num} 星联币来兑换 ${num * 180} 麻袋？`);
         if (!result) return;
         sjManager.OriginiumsToJade(num);
         ViewControl.ViewSync(headHunter.GetMinFloor());

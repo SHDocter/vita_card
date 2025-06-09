@@ -48,7 +48,7 @@ export class ViewControl {
     }
 
     public static CloseFirstEx(type: number) {
-        $('#buy-sstone' + type.toString()).text('氪金' + originiumsPacks.price[type].toString() + '元买' + originiumsPacks.count[type] + '源石');
+        $('#buy-sstone' + type.toString()).text('氪金' + originiumsPacks.price[type].toString() + '元买' + originiumsPacks.count[type] + '星联币');
     }
 
     public static ClosePackage(type: number) {

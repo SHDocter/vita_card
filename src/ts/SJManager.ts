@@ -16,7 +16,7 @@ export class SJManager {
 
     public IsFirstBuy(type: number): boolean {
         if (type >= originiumsPacks.count.length || type < 0) {
-            throw new Error(`不存在编号为 ${type} 的源石商品`);
+            throw new Error(`不存在编号为 ${type} 的星联币商品`);
         }
         return this.isFirstBuyOriginiumsPack[type];
     }
@@ -47,20 +47,20 @@ export class SJManager {
 
     public BuyOriginiums(type: number) {
         if (type >= originiumsPacks.count.length || type < 0) {
-            throw new Error(`不存在编号为 ${type} 的源石商品`);
+            throw new Error(`不存在编号为 ${type} 的星联币商品`);
         }
         if (this.isFirstBuyOriginiumsPack[type]) {
             this.AddOriginiums(originiumsPacks.extra[type]);
-            this.counter.Spend(`${originiumsPacks.extra[type]} 源石`, originiumsPacks.price[type]);
+            this.counter.Spend(`${originiumsPacks.extra[type]} 星联币`, originiumsPacks.price[type]);
         } else {
             this.AddOriginiums(originiumsPacks.count[type]);
-            this.counter.Spend(`${originiumsPacks.count[type]} 源石`, originiumsPacks.price[type]);
+            this.counter.Spend(`${originiumsPacks.count[type]} 星联币`, originiumsPacks.price[type]);
         }
         this.isFirstBuyOriginiumsPack[type] = false;
     }
 
     public OriginiumsToJade(stonenum: number = 0) {
-        if (stonenum > SJManager.originiums) throw new Error('兑换失败：源石不足');
+        if (stonenum > SJManager.originiums) throw new Error('兑换失败：星联币不足');
         SJManager.originiums -= stonenum;
         SJManager.compoundJade += stonenum * 180;
 
